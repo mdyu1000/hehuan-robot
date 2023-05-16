@@ -7,12 +7,14 @@ services:
     environment:
       - MAX_CONCURRENT_SESSIONS=10
 
-  puppeteer-app:
-    image: mdyu1000/hehuan-robot
+  hehuan-robot:
+    image: mdyu1000/hehuan-robot:lastest
     environment:
       - NODE_ENV=production
       - HEHUAN_ACCOUNT=yourAccount
       - HEHUAN_PASSWORD=yourPassword
+      - HEHUAN_ROOM_TYPE=SkiHostel
+      - QUANTITY=1
       - DATE=YYYY-MM-DD
     depends_on:
       - browserless
