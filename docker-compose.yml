@@ -8,11 +8,13 @@ services:
       - MAX_CONCURRENT_SESSIONS=10
 
   puppeteer-app:
-    image: mdyu1000/hehuan-robot
+    build:
+      context: .
+      dockerfile: Dockerfile.heHuan-robot-docker2
     environment:
       - NODE_ENV=production
       - HEHUAN_ACCOUNT=yourAccount
       - HEHUAN_PASSWORD=yourPassword
-      - DATE=YYYY-MM-DD
+      - DATE=2023-05-25
     depends_on:
       - browserless
