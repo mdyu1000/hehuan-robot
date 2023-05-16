@@ -13,6 +13,7 @@ services:
       - NODE_ENV=production
       - HEHUAN_ACCOUNT=yourAccount
       - HEHUAN_PASSWORD=yourPassword
+      # NOTE: HEHUAN_ROOM_TYPE: LargeTwinSuite | ScenicDoubleSuite | SkiHostel | ClassicDoubleSuite
       - HEHUAN_ROOM_TYPE=SkiHostel
       - QUANTITY=1
       - DATE=YYYY-MM-DD
